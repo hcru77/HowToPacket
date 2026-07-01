@@ -1,7 +1,8 @@
 #include <iostream>
+#include <stdio.h>
 #include <WinSock2.h>
 #include <ws2tcpip.h>
-#include <stdio.h>
+
 
 #define DEFAULT_PORT "27015"
 #define DEFAULT_BUFLEN 512
@@ -116,10 +117,6 @@ int main() {
 		WSACleanup();
 		return 1;
 	}
-
-
-	//std::cout << "press enter" << std::endl;
-	//std::cin.get();
 
 	closesocket(ClientSocket);
 	WSACleanup();
